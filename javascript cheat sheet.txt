@@ -1,0 +1,208 @@
+JavaScript Cheat Sheet
+========================
+
+- Web based programming language
+- Add interactive behavior to webpages
+- Build web, mobile, and desktop applications
+- Used in Game development
+- Creat command line tools
+
+========================================
+
+Day 1: 
+======
+1- Single line comment: //
+2- multiline comment: /* */
+3- console.log(""); 
+	*console is used while debugging projects
+4- popup alert: window.alert("message");
+5- Variables:
+=============
+	a- container for storing data
+	b- behaves as if it is the value stored in it
+	c- variables are decalred in 3 ways: 
+		i- var: limited to a function(){}, might change browser's window properties if declared globally
+		ii- let: limited to block scope
+		iii- const: constant value for the whole program, can't be changed
+	d- variables are of 3 datatypes: 
+		i- String: set of characters 
+			e.g: let name = "Alaa";
+		ii- numbers 
+			e.g: let age = 20;
+			     let x = 3.14;
+		iii- boolean: true or false value 
+			e.g: let student = true;
+			     let grad = false;
+	e- displaying variables on the console we use: console.log();
+		e.g: let name = "Alaa";
+		     console.log(name); OR console.log("Hello", name, " You're Welcome");
+
+6- Adding/Updating data in the HTML elements:
+====================================
+	-we use the dom (Document Object Model)
+	- document.getElemntByID("unique id of a certain html element").innerHTML = "";
+
+7- Accepting user input:
+=================
+	a- window.prompt("message");
+	b- i- create HTML from with unique ids
+	    ii- create function in javascript:
+		e.g: document.getElementById("Id of the button in the html form").onclick = function(){
+			var x = document.getElementById("Id of the input field").value;
+			//complete the program according to the prompt
+			}	
+
+	* user input is always saved as String by default, however to change a datatype of a certain variable we use built in javascript constructors. To parse into:
+		i- number: Number(name of variable); 
+		ii- String: String(name of variable); 
+ 		ii- boolean: Boolean(name of variable); 
+
+
+8- Math functions and arithmatic operations:
+=================================
+	a-  Math.round();
+	b- Math.floor(); // round a variable to the nearest *smaller* number
+	c- Math.ceil(); //round a variable to the nearest *greater* number
+	d- Math.pow(base, exponent); || **
+	e- Math.sqrt();
+	f- Math.abs(); //absolute value
+	g- Math.max(var1, var2); // maximum value between a range of numbers
+	h- Math.min(var1, var2); //minimum value between a range of numbers
+	e- Math.PI;
+
+	Precedence: ( )
+		   **
+		   *, /
+		   +, -
+
+9- String Methods: (via examples)
+=========================
+let name = "Alaa Janbieh";
+a- length method: var x = name.length //12
+b- charAt() method: return the character at the position of the index
+		name.charAt(0); //A
+c- indexOf("") method: returns the index of the first occurence of the given character
+		name.indexOf("J"); // 5
+d- lastIndexOf("") method: returns the last occurence of the given character
+		name.lastIndexOf("a"); //6
+e- trim() method: removes spaces before and after a given string
+f- toUpperCase() method: changes all letters of the string to be upper case letters
+			name.toUpperCase(); // ALAA JANBIEH
+g- toLoweCase() method: changes all letters of the string to be lower case letters
+			name.toLowerCase(); //alaa janbieh
+h- replaceAll("","") method: replaces all occurences of the given character in a certain string with the new one
+			name.replaceAll("a", "-"); // Al-- J-nbieh
+i- slice() method: extracts a section of a string, it returns the section as a new string without modifying the original string
+		e.g: let firstName = name.slice(0,1); // 1 is included, 2 excluded => Al
+		      let fname = name.slice(5); // Janbieh 
+
+10- Method Chaining:
+=================
+calling one method after another in one continuous line of code
+
+11- Conditional (if and switch):
+========================
+	a- if statement:
+	___________
+	NOTE: order of conditions MATTER
+	the "if statement" is used to check wether a condition is true => execute a certain line of code, else => execute another set of lines.
+		i-syntax: 
+		---------
+		     if(condition){
+
+		     }
+		    else{
+	
+		    }
+	- ternary operator: condition ? expresion if true : expresion if false;
+	b- switch:
+	________
+	- a switch is used to reduce if-else statements
+		i- syntax:
+		----------
+		switch(  ){
+		    case .....:
+			code;
+			breake;
+		    case .....:
+			code;
+			breake;
+		    default: code;
+		} 
+	- e.g:
+	let grade = 90 
+	switch(grade){
+		    case 90:
+			console.log("Great! you got an A");
+			breake;
+		    case 80:
+			console.log("Hurray! you got a B");
+			breake;
+		    case 70:
+			console.log("Nice! you got a C");
+			breake;
+		    case 60:
+			console.log("Nice try! you got a D");
+			breake;
+		    default: console.log("You failed, Try again later");
+		} 
+
+11- the "="
+==========
+ = : used for assigning a value
+== : used for comparison disregarding the data type
+===: strict equality operator - compare data type and value 
+
+12- Checked property:
+=================
+ - used for checkboxes and radio buttons of same group
+ - method returns true or false
+ - e.g.: document.getElementById("checkVisa").checked 
+
+13-Logical operators:
+=================
+ - AND : && - both conditions should be true
+ - OR: || - either one condition must be true
+ - NOT : ! - reverse
+
+14- functions:
+===========
+ - to create a function we use the keyword "function"
+ - function name(parameter 1, parameter 2, ...){ function body }
+
+15- Loops:
+=========
+	a- while loop:
+	___________
+	- the code in the loop is executed until the condition is false
+	- syntax: while (cond) { code; }
+
+ 
+	b- do while loop:
+	____________
+	- the code is executed then condition is checked. => if condition is true, code is executed. Else, the compiler exits the loop
+	- syntax: do{  code   } while(condition);
+
+
+	c- for loop:
+	________  
+	- code is repeated a defined number of times 
+	- syntax: for(var i =  ; condition; variation in i) { code; }
+
+NOTE: - break; stops the loop
+            - continue: skips an ittiration
+
+16- Template Literals: `
+=================
+	console.log(`......... ${var name}.............`);
+
+17- Format currency: nb.toLocaleString(locale, {options})
+================ 
+	-locale : specify language
+	-options: object with formatting options 
+	--e.g: let myNum = 123456.789
+	         myNum = myNum.toLocaleString("en-us");
+	         myNum = myNum.toLocaleString(" en-us (language)", {style: "currency", currency = " "});
+
+
+NOTE: degree sign (°) : ALT+0176 on numeric keypad  
