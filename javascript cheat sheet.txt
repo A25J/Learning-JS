@@ -206,3 +206,47 @@ NOTE: - break; stops the loop
 
 
 NOTE: degree sign (°) : ALT+0176 on numeric keypad  
+
+18- Array
+==========
+- array is a collection of items stored in a single variable
+- e.g: let fruits = ["  ", "  "];
+- array methods: push(), pop(), shift(), unshift(), indexOf(), length, sort(), sort().reverse()
+	a- push: adds an element at the end of the array
+	b- pop: removes the last element in the array
+	c- shift: removes the first element in the array
+	d- unshift: adds an element at the beginning of the array
+	e- indexOf: returns the index of the given element in the array
+	f- sort: sorting elements of an array in increasing order
+	g- sort().reverse(): sorting elemnts in decreasing order
+- Ittiraring over an array
+--------------------------
+	a- for loop:
+	for (let i = 0; i<array.length; i++){
+		//code;
+		}
+	OR:
+	for(let i = array.length - 1; i>0; i--){
+		//code;
+	}
+
+	b- for-of:
+	for(let variable of array){
+		console.log(variable);
+	}
+
+- 2D-Array or Multidimensional array:
+-------------------------------------
+	- array of arrays
+	- eg: let a1 = ["  ", "  "];
+	      let a2 = ["  ", "  "];
+		  let a2 = ["  ", "  "];
+		  To make 2D array: let A = [a1,a2,a3];
+	- to ittirate over a 2D array, we need nested loops:
+		for (let var1 of array1){
+			for(let var2 of array2){
+				console.log(var2);
+			}
+		}
+	- to access a certain element of a 2D array: array[row][column];
+
