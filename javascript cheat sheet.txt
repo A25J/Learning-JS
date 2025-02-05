@@ -250,3 +250,11 @@ NOTE: degree sign (°) : ALT+0176 on numeric keypad
 		}
 	- to access a certain element of a 2D array: array[row][column];
 
+- Spread operator: 
+-------------------
+	- syntax: ...
+	- allows an iterable such as an array or splitting and array or string to be expanded into 
+	seperate elements (Unpacks the elements)
+	-eg: let username = "Alaa Janbieh";
+		let letters = [...username]; --> "A", "l", "a", "a", "J", "a", "n", "b", "i", "e", "h"
+		
